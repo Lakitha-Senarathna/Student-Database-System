@@ -10,7 +10,7 @@ public class App {
         int choice;
 
         do {
-            System.out.println("Student Database");
+            System.out.println("=== Student Database App ===");
             System.out.println("1) Add student");
             System.out.println("2) List students");
             System.out.println("3) Update student");
@@ -18,7 +18,7 @@ public class App {
             System.out.println("0) Exit");
             System.out.print("Select: ");
             choice = scanner.nextInt();
-            scanner.nextLine();  
+            scanner.nextLine();  // consume newline
 
             switch (choice) {
                 case 1:
@@ -33,6 +33,7 @@ public class App {
                 case 2:
                     List<Student> students = dao.getAllStudents();
                     System.out.println("ID   | NAME     | EMAIL                    | COURSE");
+                    System.out.println("---------------------------------------------------");
                     for (Student s : students) {
                         System.out.printf("%-4d | %-8s | %-24s | %-6s%n", s.getId(), s.getName(), s.getEmail(), s.getCourse());
                     }
