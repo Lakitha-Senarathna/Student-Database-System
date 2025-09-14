@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) {
-        StudentDAO dao = new StudentDAO();
+        Operation dao = new Operation();
         Scanner scanner = new Scanner(System.in);
         int choice;
 
